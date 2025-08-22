@@ -13,7 +13,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f8d3c9, #d9a7c7, #b78b6d);
+      background: linear-gradient(135deg, #f5e6d3, #eacda3, #d6a07a);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -25,27 +25,26 @@
 
     .container {
       background: rgba(255, 255, 255, 0.95);
-      border-radius: 30px;
+      border-radius: 25px;
       padding: 40px 25px;
       text-align: center;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-      max-width: 500px;
+      max-width: 480px;
       width: 100%;
+      margin: 50px 0;
       position: relative;
-      margin-top: 40px;
-      margin-bottom: 40px;
     }
 
     /* Floating coffee steam */
     .steam {
       position: absolute;
-      top: 60px;
+      top: 50px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
       color: #fff;
       opacity: 0.7;
-      animation: rise 3s infinite ease-in-out;
+      animation: rise 4s infinite ease-in-out;
     }
     .steam:nth-child(2) { animation-delay: 1s; }
     .steam:nth-child(3) { animation-delay: 2s; }
@@ -53,36 +52,36 @@
     @keyframes rise {
       0% { transform: translate(-50%, 20px); opacity: 0; }
       30% { opacity: 0.8; }
-      100% { transform: translate(-50%, -40px); opacity: 0; }
+      100% { transform: translate(-50%, -50px); opacity: 0; }
     }
 
     /* Hearts floating */
     .heart {
       position: absolute;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       color: #ff6b9d;
-      animation: float 6s ease-in-out infinite;
+      animation: float 8s ease-in-out infinite;
       opacity: 0.6;
     }
-    .heart:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-    .heart:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
-    .heart:nth-child(3) { bottom: 15%; left: 20%; animation-delay: 4s; }
-    .heart:nth-child(4) { bottom: 25%; right: 10%; animation-delay: 1s; }
+    .heart:nth-child(4) { top: 15%; left: 12%; animation-delay: 0s; }
+    .heart:nth-child(5) { top: 25%; right: 18%; animation-delay: 3s; }
+    .heart:nth-child(6) { bottom: 12%; left: 25%; animation-delay: 5s; }
+    .heart:nth-child(7) { bottom: 20%; right: 15%; animation-delay: 2s; }
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+      50% { transform: translateY(-25px); }
     }
 
     .title {
-      color: #6a3e2e;
-      font-size: 2.3rem;
+      color: #5b3a29;
+      font-size: 2.2rem;
       margin-bottom: 15px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
     }
 
     .message {
-      color: #4b2e2e;
+      color: #3d2b1f;
       font-size: 1.2rem;
       margin-bottom: 25px;
       line-height: 1.6;
@@ -92,8 +91,8 @@
     .coffee-cup {
       width: 120px;
       height: 120px;
-      background: linear-gradient(45deg, #6f4e37, #a9746e);
-      border-radius: 50% 50% 30% 30%;
+      background: radial-gradient(circle at 50% 40%, #6f4e37, #3d2b1f);
+      border-radius: 50% 50% 35% 35%;
       margin: 0 auto 30px;
       position: relative;
       box-shadow: 0 10px 25px rgba(111, 78, 55, 0.3);
@@ -105,7 +104,7 @@
       right: -20px;
       width: 40px;
       height: 60px;
-      background: linear-gradient(45deg, #6f4e37, #a9746e);
+      background: #d6a07a;
       border-radius: 0 50% 50% 0;
       transform: rotate(-45deg);
     }
@@ -139,12 +138,12 @@
     }
 
     .btn-yes {
-      background: linear-gradient(45deg, #8a2be2, #ff6b9d);
+      background: linear-gradient(45deg, #b5651d, #eecda3);
       color: white;
     }
     .btn-yes:hover {
       transform: scale(1.1);
-      box-shadow: 0 10px 28px rgba(138, 43, 226, 0.4);
+      box-shadow: 0 10px 28px rgba(111, 78, 55, 0.4);
     }
 
     .btn-no {
@@ -167,7 +166,7 @@
       display: none;
       margin-top: 25px;
       padding: 25px;
-      background: linear-gradient(135deg, #6f4e37, #ff6b9d);
+      background: linear-gradient(135deg, #6f4e37, #d6a07a);
       border-radius: 20px;
       color: white;
       animation: fadeIn 1s ease;
@@ -182,7 +181,7 @@
     }
     .romantic-text {
       font-style: italic;
-      color: #ffd6eb;
+      color: #ffe0c2;
       margin-top: 15px;
       font-size: 1rem;
     }
@@ -191,11 +190,11 @@
     .schedule {
       margin-top: 20px;
       padding: 15px;
-      background: #fff;
-      color: #6f4e37;
+      background: #fffaf2;
+      color: #5b3a29;
       border-radius: 15px;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
       animation: fadeIn 1s ease;
     }
@@ -213,36 +212,36 @@
     <div class="steam">~</div>
     <div class="steam">~</div>
 
-    <!-- Hearts floating -->
+    <!-- Floating hearts -->
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
 
-    <h1 class="title">Coffee with My Love ☕💖</h1>
+    <h1 class="title">Coffee with My Favorite Person ☕💖</h1>
     <div class="coffee-cup"></div>
     <p class="message">
-      Would you join me for a cozy coffee date?<br>
-      I promise laughter, warmth, and sweet memories! 💕
+      Will you join me for a warm, cozy coffee date?<br>
+      I promise laughter, comfort, and sweet vibes! 💕
     </p>
 
     <div class="buttons" id="buttons-container">
-      <button class="btn btn-yes" id="yes-btn">YES! 💕</button>
+      <button class="btn btn-yes" id="yes-btn">YES! ☕💕</button>
       <button class="btn btn-no" id="no-btn"><span>No</span></button>
     </div>
 
     <div class="result" id="result">
       <h2>Yay! You said YES! 🎉</h2>
       <p>
-        I can’t wait to sip coffee with you and talk for hours! 💝
+        I can’t wait to sip coffee with you and share wonderful conversations 💝
       </p>
       <div class="schedule">
         📅 <strong>August 23, 2025</strong><br>
         🕔 <strong>5:00 PM</strong><br>
-        ☕ Our Special Coffee Date!
+        ☕ Our Special Coffee Date
       </div>
       <p class="romantic-text">
-        "With you, even the simplest coffee becomes a beautiful memory."
+        "With you, even a simple cup of coffee becomes the sweetest memory."
       </p>
     </div>
   </div>
