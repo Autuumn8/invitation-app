@@ -4,55 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Coffee Date Invitation ☕💕</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Date Invitation</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI Rounded', 'Arial Rounded MT Bold', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background: linear-gradient(135deg, #f5e6d3, #eacda3, #d6a07a);
+      background: linear-gradient(135deg, #d7ccc8, #a1887f);
       min-height: 100vh;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #d9a7c7, #fffcdc);
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      padding: 20px;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
       align-items: center;
-      height: 100vh;
-      margin: 0;
       overflow: hidden;
-      position: relative; /* ✅ allow absolute positioning inside body */
+      padding: 20px;
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 25px;
+      background: rgba(255, 248, 240, 0.95);
+      border-radius: 20px;
       padding: 40px 25px;
-    h1 {
-      font-size: 2.5rem;
-      color: #4b2e2e;
-      margin-bottom: 20px;
       text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       max-width: 480px;
       width: 100%;
-      margin: 50px 0;
       position: relative;
+      z-index: 2;
     }
 
-    /* Floating coffee steam */
+    /* Coffee steam */
     .steam {
       position: absolute;
-      top: 50px;
+      top: 40px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 2rem;
@@ -67,32 +52,15 @@
       0% { transform: translate(-50%, 20px); opacity: 0; }
       30% { opacity: 0.8; }
       100% { transform: translate(-50%, -50px); opacity: 0; }
-    .coffee-cup {
-      width: 120px;
-      height: 120px;
-      background: #6f4e37;
-      border-radius: 50% 50% 45% 45%;
-      position: relative;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 
-    /* Hearts floating */
+    /* Hearts */
     .heart {
-    .coffee-cup::before {
-      content: '';
-      width: 40px;
-      height: 40px;
-      border: 8px solid #6f4e37;
-      border-radius: 50%;
       position: absolute;
       font-size: 1.6rem;
       color: #ff6b9d;
       animation: float 8s ease-in-out infinite;
       opacity: 0.6;
-      top: 25px;
-      right: -30px;
-      background: transparent;
     }
     .heart:nth-child(4) { top: 15%; left: 12%; animation-delay: 0s; }
     .heart:nth-child(5) { top: 25%; right: 18%; animation-delay: 3s; }
@@ -102,25 +70,13 @@
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-25px); }
-    .steam {
-      position: absolute;
-      width: 10px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 50%;
-      animation: rise 3s infinite;
-      left: 40px;
-      top: -50px;
     }
 
     .title {
+      font-size: 2rem;
       color: #5b3a29;
-      font-size: 2.2rem;
       margin-bottom: 15px;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
-    .steam:nth-child(2) {
-      left: 60px;
-      animation-delay: 1s;
     }
 
     .message {
@@ -128,9 +84,6 @@
       font-size: 1.2rem;
       margin-bottom: 25px;
       line-height: 1.6;
-    .steam:nth-child(3) {
-      left: 80px;
-      animation-delay: 2s;
     }
 
     /* Coffee cup */
@@ -154,83 +107,58 @@
       border-radius: 0 50% 50% 0;
       transform: rotate(-45deg);
     }
-    .coffee-cup::after {
-      content: '☕';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 3rem;
-      color: #fff;
-    @keyframes rise {
-      0% { opacity: 0; transform: translateY(20px); }
-      50% { opacity: 1; transform: translateY(-20px); }
-      100% { opacity: 0; transform: translateY(-60px); }
-    }
 
     .buttons {
+      margin-top: 20px;
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 20px;
       flex-wrap: wrap;
-      margin-top: 30px;
-      position: relative;
     }
 
     .btn {
-      padding: 14px 35px;
-    button {
       padding: 12px 25px;
       border: none;
-      border-radius: 40px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      border-radius: 25px;
+      border-radius: 30px;
       font-size: 1rem;
+      font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-      transition: transform 0.2s ease, background 0.3s ease;
     }
 
     .btn-yes {
       background: linear-gradient(45deg, #b5651d, #eecda3);
       color: white;
-    #yesBtn {
-      background-color: #6f4e37;
-      color: #fff;
-      z-index: 10; /* ✅ ensure it's always clickable */
-      position: relative;
     }
     .btn-yes:hover {
-
-    #yesBtn:hover {
-      background-color: #4b2e2e;
+      background: #4e342e;
       transform: scale(1.1);
       box-shadow: 0 10px 28px rgba(111, 78, 55, 0.4);
     }
 
     .btn-no {
-      background: #ddd;
-      color: #999;
-      cursor: not-allowed;
+      background: #d7ccc8;
+      color: #4e342e;
       position: relative;
     }
-    .btn-no::before {
-      content: '🚫';
+
+    /* Floating coffee beans */
+    .coffee-bean {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 100vh;
       font-size: 1.3rem;
-    #noBtn {
-      background-color: #d4a373;
-      color: #fff;
-      position: absolute; /* ✅ now moves relative to body */
+      width: 40px;
+      opacity: 0.7;
+      animation: float-beans 8s linear infinite;
     }
 
-    /* Result screen */
+    @keyframes float-beans {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-10vh) rotate(360deg); }
+    }
+
+    /* Result box */
     .result {
       display: none;
       margin-top: 25px;
@@ -241,60 +169,34 @@
       animation: fadeIn 1s ease;
     }
     .result h2 {
-      font-size: 1.9rem;
-      margin-bottom: 15px;
-    }
-    .result p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
     }
     .romantic-text {
       font-style: italic;
       color: #ffe0c2;
-      margin-top: 15px;
+      margin-top: 10px;
       font-size: 1rem;
-    #noBtn:hover {
-      background-color: #b07d4f;
-    }
-
-    /* Schedule box */
-    .schedule {
-      margin-top: 20px;
-      padding: 15px;
-      background: #fffaf2;
-      color: #5b3a29;
-      border-radius: 15px;
-    #message {
-      margin-top: 30px;
-      font-size: 1.5rem;
-      color: #4b2e2e;
-      font-weight: bold;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      animation: fadeIn 1s ease;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-      text-align: center;
-      display: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Steam rising -->
+    <!-- Steam -->
     <div class="steam">~</div>
     <div class="steam">~</div>
     <div class="steam">~</div>
 
-    <!-- Floating hearts -->
+    <!-- Hearts -->
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
     <div class="heart">❤️</div>
-  <h1>Would you like to grab a coffee with me? ☕</h1>
 
     <h1 class="title">Coffee with My Favorite Person ☕💖</h1>
     <div class="coffee-cup"></div>
@@ -305,88 +207,49 @@
 
     <div class="buttons" id="buttons-container">
       <button class="btn btn-yes" id="yes-btn">YES! ☕💕</button>
-      <button class="btn btn-no" id="no-btn"><span>No</span></button>
+      <button class="btn btn-no" id="no-btn">No 🚫</button>
     </div>
-  <div class="coffee-cup">
-    <div class="steam"></div>
-    <div class="steam"></div>
-    <div class="steam"></div>
-  </div>
 
     <div class="result" id="result">
       <h2>Yay! You said YES! 🎉</h2>
-      <p>
-        I can’t wait to sip coffee with you and share wonderful conversations 💝
-      </p>
+      <p>I can’t wait to sip coffee with you and share wonderful conversations 💝</p>
       <div class="schedule">
         📅 <strong>August 23, 2025</strong><br>
         🕔 <strong>5:00 PM</strong><br>
         ☕ Our Special Coffee Date
       </div>
-      <p class="romantic-text">
-        "With you, even a simple cup of coffee becomes the sweetest memory."
-      </p>
+      <p class="romantic-text">"With you, even a simple cup of coffee becomes the sweetest memory."</p>
     </div>
-  <div class="buttons">
-    <button id="yesBtn">Yes</button>
-    <button id="noBtn">No</button>
   </div>
 
-  <div id="message">Yay! Can’t wait for our coffee date together! ❤️☕</div>
+  <!-- Floating coffee beans -->
+  <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" class="coffee-bean" style="left:10%; animation-duration:8s;">
+  <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" class="coffee-bean" style="left:30%; animation-duration:12s;">
+  <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" class="coffee-bean" style="left:50%; animation-duration:10s;">
+  <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" class="coffee-bean" style="left:70%; animation-duration:9s;">
+  <img src="https://cdn-icons-png.flaticon.com/512/590/590836.png" class="coffee-bean" style="left:90%; animation-duration:11s;">
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const yesBtn = document.getElementById('yes-btn');
-      const noBtn = document.getElementById('no-btn');
-      const result = document.getElementById('result');
-      const buttonsContainer = document.getElementById('buttons-container');
-      const title = document.querySelector('.title');
-      const message = document.querySelector('.message');
-      const coffeeCup = document.querySelector('.coffee-cup');
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
-    const message = document.getElementById("message");
-    const buttonsContainer = document.querySelector(".buttons");
+    const yesBtn = document.getElementById("yes-btn");
+    const noBtn = document.getElementById("no-btn");
+    const result = document.getElementById("result");
+    const container = document.querySelector(".container");
 
-    // ✅ Show result when clicking YES
-    function showYes() {
-      message.style.display = "block";
-      buttonsContainer.style.display = "none";
-    }
-    yesBtn.addEventListener("click", showYes);
-    yesBtn.addEventListener("touchstart", showYes); // ✅ iOS touch fix
+    yesBtn.addEventListener("click", () => {
+      result.style.display = "block";
+    });
 
-    // ✅ Make the "No" button move randomly across full screen
-    function moveNo() {
-      const bodyWidth = window.innerWidth - noBtn.offsetWidth;
-      const bodyHeight = window.innerHeight - noBtn.offsetHeight;
+    noBtn.addEventListener("mouseover", () => {
+      const containerRect = container.getBoundingClientRect();
+      const maxX = containerRect.width - noBtn.offsetWidth - 20;
+      const maxY = containerRect.height - noBtn.offsetHeight - 20;
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
 
-      // Move "No" button away
-      noBtn.addEventListener('mouseover', function() {
-        const maxX = window.innerWidth - noBtn.offsetWidth - 40;
-        const maxY = window.innerHeight - noBtn.offsetHeight - 40;
-        noBtn.style.position = 'absolute';
-        noBtn.style.left = Math.random() * maxX + 'px';
-        noBtn.style.top = Math.random() * maxY + 'px';
-      });
-      const randomX = Math.floor(Math.random() * bodyWidth);
-      const randomY = Math.floor(Math.random() * bodyHeight);
-
+      noBtn.style.position = "absolute";
       noBtn.style.left = randomX + "px";
       noBtn.style.top = randomY + "px";
-    }
-
-      // "Yes" button click
-      yesBtn.addEventListener('click', function() {
-        title.style.display = 'none';
-        message.style.display = 'none';
-        coffeeCup.style.display = 'none';
-        buttonsContainer.style.display = 'none';
-        result.style.display = 'block';
-      });
     });
-    noBtn.addEventListener("mouseover", moveNo);
-    noBtn.addEventListener("touchstart", moveNo); // ✅ mobile support
   </script>
 </body>
 </html>
