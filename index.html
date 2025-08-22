@@ -149,7 +149,6 @@
     .btn-no {
       background: #ddd;
       color: #999;
-      cursor: not-allowed;
       position: relative;
     }
     .btn-no::before {
@@ -256,24 +255,6 @@
       const message = document.querySelector('.message');
       const coffeeCup = document.querySelector('.coffee-cup');
 
-      // Move "No" button away
-      noBtn.addEventListener('mouseover', function() {
-        const maxX = window.innerWidth - noBtn.offsetWidth - 40;
-        const maxY = window.innerHeight - noBtn.offsetHeight - 40;
-        noBtn.style.position = 'absolute';
-        noBtn.style.left = Math.random() * maxX + 'px';
-        noBtn.style.top = Math.random() * maxY + 'px';
-      });
-
-      // "Yes" button click
-      yesBtn.addEventListener('click', function() {
-        title.style.display = 'none';
-        message.style.display = 'none';
-        coffeeCup.style.display = 'none';
-        buttonsContainer.style.display = 'none';
-        result.style.display = 'block';
-      });
-    });
-  </script>
-</body>
-</html>
+      // Function to move "No" button randomly
+      function moveNoButton() {
+        const maxX = window.innerWidth - n
